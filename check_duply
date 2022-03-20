@@ -41,7 +41,7 @@ def main():
     args.critinc = intstringtoseconds(args.critinc)
     args.critfull = intstringtoseconds(args.critfull)
 
-    output , err = Popen(["duply", args.profile, "status"], stdout=PIPE, stderr=PIPE , env={'PATH': os.environ['PATH']}).communicate()
+    output , err = Popen(["duply-status", args.profile], stdout=PIPE, stderr=PIPE , env={'PATH': os.environ['PATH']}).communicate()
 
     lastfull, lastinc = findlastdates(output)
 
